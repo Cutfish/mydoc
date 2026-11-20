@@ -1,0 +1,108 @@
+<Slide style={{ width: 1280, height: 720, background: '#F6F7F9', padding: 60, fontFamily: 'Microsoft YaHei', flexDirection: 'column' }}>
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#12161F', lineHeight: 1.2 }}>日志打点：不按请求起协程，改成批量上报</Text>
+        <Text style={{ fontSize: 14, color: '#98A2B3', letterSpacing: 2, lineHeight: 1.5 }}>03 / 产品与项目</Text>
+    </Box>
+    <Box style={{ height: 1, width: '100%', background: '#DCE0E6', marginTop: 16 }} />
+
+    <Box style={{ flexDirection: 'row', width: '100%', marginTop: 24 }}>
+        <Box style={{ width: 470, flexDirection: 'column' }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7B8697' }}>V1 · 一个请求一个协程</Text>
+
+            <Box style={{ flexDirection: 'row', marginTop: 18 }}>
+                <Box style={{ width: 130, height: 60, background: '#EDEFF3', padding: 12, justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 17, color: '#12161F' }}>请求</Text>
+                </Box>
+                <Box style={{ width: 40, height: 60, alignItems: 'center', justifyContent: 'center' }}><Text style={{ fontSize: 17, color: '#B9C0CB', lineHeight: 1.2 }}>→</Text></Box>
+                <Box style={{ width: 170, height: 60, background: '#FFFFFF', border: '1px solid #DCE0E6', borderLeft: '3px solid #E1582F', padding: 12, justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 17, color: '#12161F' }}>起协程上报</Text>
+                </Box>
+                <Box style={{ width: 40, height: 60, alignItems: 'center', justifyContent: 'center' }}><Text style={{ fontSize: 17, color: '#B9C0CB', lineHeight: 1.2 }}>→</Text></Box>
+                <Box style={{ width: 90, height: 60, background: '#EDEFF3', padding: 12, justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 17, color: '#12161F' }}>采集端</Text>
+                </Box>
+            </Box>
+
+            <Box style={{ flexDirection: 'column', gap: 16, marginTop: 24 }}>
+                <Box style={{ flexDirection: 'row' }}>
+                    <Text style={{ fontSize: 14, color: '#E1582F', width: 26, lineHeight: 1.9 }}>01</Text>
+                    <Box style={{ flex: 1, flexDirection: 'column', gap: 6 }}>
+                        <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>协程创建数量有上限</Text>
+                        <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>请求一多，协程池到顶，超出的打点直接发不出去</Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ flexDirection: 'row' }}>
+                    <Text style={{ fontSize: 14, color: '#E1582F', width: 26, lineHeight: 1.9 }}>02</Text>
+                    <Box style={{ flex: 1, flexDirection: 'column', gap: 6 }}>
+                        <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>协程太多，上下文切换变慢</Text>
+                        <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>调度开销挤占请求处理，API 超时之后打点跟着失败</Text>
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
+
+        <Box style={{ flex: 1, flexDirection: 'column', marginLeft: 40 }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1B3C6E' }}>V2 · 进程内缓冲 + 批量上报</Text>
+
+            <Box style={{ flexDirection: 'row', marginTop: 18 }}>
+                <Box style={{ width: 110, height: 60, background: '#EDEFF3', padding: 12, justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 17, color: '#12161F' }}>请求</Text>
+                </Box>
+                <Box style={{ width: 36, height: 60, alignItems: 'center', justifyContent: 'center' }}><Text style={{ fontSize: 17, color: '#B9C0CB', lineHeight: 1.2 }}>→</Text></Box>
+                <Box style={{ width: 150, height: 60, background: '#12161F', padding: 12, justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 17, color: '#F4F6F9' }}>进程内 buffer</Text>
+                </Box>
+                <Box style={{ width: 36, height: 60, flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 2 }}>
+                    <Text style={{ fontSize: 14, color: '#E1582F', lineHeight: 1.2 }}>timer</Text>
+                    <Text style={{ fontSize: 17, color: '#B9C0CB', lineHeight: 1.2 }}>→</Text>
+                </Box>
+                <Box style={{ width: 140, height: 60, background: '#FFFFFF', border: '1px solid #DCE0E6', padding: 12, justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 17, color: '#12161F' }}>批量上报</Text>
+                </Box>
+                <Box style={{ width: 36, height: 60, alignItems: 'center', justifyContent: 'center' }}><Text style={{ fontSize: 17, color: '#B9C0CB', lineHeight: 1.2 }}>→</Text></Box>
+                <Box style={{ width: 92, height: 60, background: '#EDEFF3', padding: 12, justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 17, color: '#12161F' }}>采集端</Text>
+                </Box>
+            </Box>
+
+            <Box style={{ flexDirection: 'column', gap: 8, marginTop: 20 }}>
+                <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>请求路径上不再创建协程，只做一次 buffer 追加</Text>
+                <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>timer 定时批量 flush，进程之间互不干扰</Text>
+                <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>reload 场景单独处理，buffer 不随重启丢失</Text>
+                <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>补充失败计数与降级策略，异常可观测、可定位</Text>
+            </Box>
+        </Box>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', background: '#12161F', paddingTop: 22, paddingBottom: 22, paddingLeft: 24, paddingRight: 24, gap: 16, marginTop: 34 }}>
+        <Box style={{ width: 340, flexDirection: 'column', gap: 6 }}>
+            <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#F4F6F9', lineHeight: 1.15 }}>7,000 → 64</Text>
+            <Text style={{ fontSize: 14, color: '#8B95A5' }}>采集端接收请求量（req/s）</Text>
+        </Box>
+        <Box style={{ width: 220, flexDirection: 'column', gap: 6 }}>
+            <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#E1582F', lineHeight: 1.15 }}>-99.1%</Text>
+            <Text style={{ fontSize: 14, color: '#8B95A5' }}>上报量降幅</Text>
+        </Box>
+        <Box style={{ width: 220, flexDirection: 'column', gap: 6 }}>
+            <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#F4F6F9', lineHeight: 1.15 }}>0</Text>
+            <Text style={{ fontSize: 14, color: '#8B95A5' }}>稳态丢失率</Text>
+        </Box>
+        <Box style={{ width: 280, flexDirection: 'column', gap: 6 }}>
+            <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#F4F6F9', lineHeight: 1.15 }}>&lt; 2%</Text>
+            <Text style={{ fontSize: 14, color: '#8B95A5' }}>CPU 增量，p99 无明显劣化</Text>
+        </Box>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', width: '100%', marginTop: 24 }}>
+        <Box style={{ width: 2, background: '#E1582F' }} />
+        <Text style={{ flex: 1, fontSize: 17, color: '#12161F', lineHeight: 1.6, paddingLeft: 20 }}>
+            降下来的不是带宽，是量级——从「每个请求起一个协程」变成「攒够了发一批」，审计从此没有盲区。
+        </Text>
+    </Box>
+
+    <Box style={{ position: 'absolute', left: 60, right: 60, bottom: 30, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>韩雪刚 · 个人工作展示</Text>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>14 / 21</Text>
+    </Box>
+</Slide>

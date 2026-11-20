@@ -1,0 +1,74 @@
+<Slide style={{ width: 1280, height: 720, background: '#F6F7F9', padding: 60, fontFamily: 'Microsoft YaHei', flexDirection: 'column' }}>
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#12161F', lineHeight: 1.2 }}>结果与复盘</Text>
+        <Text style={{ fontSize: 14, color: '#98A2B3', letterSpacing: 2, lineHeight: 1.5 }}>03 / 产品与项目</Text>
+    </Box>
+    <Box style={{ height: 1, width: '100%', background: '#DCE0E6', marginTop: 16 }} />
+
+    <Box style={{ flexDirection: 'row', width: '100%', marginTop: 24 }}>
+        <Box style={{ width: 540, flexDirection: 'column' }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1B3C6E' }}>五件事的产出</Text>
+
+            <Box style={{ flexDirection: 'column', marginTop: 20, borderTop: '1px solid #DCE0E6' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', paddingTop: 20, paddingBottom: 20, borderBottom: '1px solid #DCE0E6' }}>
+                    <Text style={{ fontSize: 14, color: '#98A2B3', width: 34 }}>01</Text>
+                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', width: 190, lineHeight: 1.3 }}>日志打点</Text>
+                    <Text style={{ flex: 1, fontSize: 17, color: '#3D4756', lineHeight: 1.5 }}>上报量降 <span style={{ color: '#E1582F' }}>99.1%</span>，稳态丢失率归零</Text>
+                </Box>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', paddingTop: 20, paddingBottom: 20, borderBottom: '1px solid #DCE0E6' }}>
+                    <Text style={{ fontSize: 14, color: '#98A2B3', width: 34 }}>02</Text>
+                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', width: 190, lineHeight: 1.3 }}>路由匹配</Text>
+                    <Text style={{ flex: 1, fontSize: 17, color: '#3D4756', lineHeight: 1.5 }}>单域名路由提升 <span style={{ color: '#E1582F' }}>4 倍</span>，吞吐提升约 40 倍</Text>
+                </Box>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', paddingTop: 20, paddingBottom: 20, borderBottom: '1px solid #DCE0E6' }}>
+                    <Text style={{ fontSize: 14, color: '#98A2B3', width: 34 }}>03</Text>
+                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', width: 190, lineHeight: 1.3 }}>配置加载</Text>
+                    <Text style={{ flex: 1, fontSize: 17, color: '#3D4756', lineHeight: 1.5 }}>脏数据与加载长尾收敛，关键链路开发完成</Text>
+                </Box>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', paddingTop: 20, paddingBottom: 20, borderBottom: '1px solid #DCE0E6' }}>
+                    <Text style={{ fontSize: 14, color: '#98A2B3', width: 34 }}>04</Text>
+                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', width: 190, lineHeight: 1.3 }}>OpenAPI 平台</Text>
+                    <Text style={{ flex: 1, fontSize: 17, color: '#3D4756', lineHeight: 1.5 }}>几十个接口上线，多套集群一致可用</Text>
+                </Box>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', paddingTop: 20, paddingBottom: 20, borderBottom: '1px solid #DCE0E6' }}>
+                    <Text style={{ fontSize: 14, color: '#98A2B3', width: 34 }}>05</Text>
+                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', width: 190, lineHeight: 1.3 }}>权限治理</Text>
+                    <Text style={{ flex: 1, fontSize: 17, color: '#3D4756', lineHeight: 1.5 }}>离职自动回收，Agent 与超管进入流程</Text>
+                </Box>
+            </Box>
+        </Box>
+
+        <Box style={{ flex: 1, flexDirection: 'column', borderLeft: '1px solid #DCE0E6', paddingLeft: 40, marginLeft: 40 }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#E1582F' }}>回头看的三个判断</Text>
+
+            <Box style={{ flexDirection: 'column', gap: 30, marginTop: 26 }}>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>承接需求，和改底座是两件事</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>前者回答「业务方要什么」，后者回答「系统还稳不稳」。后者不做，前者迟早做不完。</Text>
+                </Box>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>安全系统的价值在边界，不在接口</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>「能调通」不是目标，权限边界清晰、变更可追溯、异常可预期才是。</Text>
+                </Box>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>长链路改造，稳比快重要</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>双写兼容加老链路兜底，比「一次切干净」更能保证迁移期不出事故。</Text>
+                </Box>
+            </Box>
+        </Box>
+    </Box>
+
+    <Box style={{ flex: 1 }} />
+
+    <Box style={{ flexDirection: 'row', width: '100%' }}>
+        <Box style={{ width: 2, background: '#1B3C6E' }} />
+        <Text style={{ flex: 1, fontSize: 17, color: '#12161F', lineHeight: 1.6, paddingLeft: 20 }}>
+            回头看，这套东西的价值不在于它有多复杂，而在于它把原本说不清的不确定性，变成了几个可以持续观测的指标。
+        </Text>
+    </Box>
+
+    <Box style={{ position: 'absolute', left: 60, right: 60, bottom: 30, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>韩雪刚 · 个人工作展示</Text>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>19 / 21</Text>
+    </Box>
+</Slide>

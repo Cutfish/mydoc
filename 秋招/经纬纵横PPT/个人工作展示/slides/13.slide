@@ -1,0 +1,48 @@
+<Slide style={{ width: 1280, height: 720, background: '#F6F7F9', padding: 60, fontFamily: 'Microsoft YaHei', flexDirection: 'column' }}>
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#12161F', lineHeight: 1.2 }}>网关引擎：三个待解的瓶颈</Text>
+        <Text style={{ fontSize: 14, color: '#98A2B3', letterSpacing: 2, lineHeight: 1.5 }}>03 / 产品与项目</Text>
+    </Box>
+    <Box style={{ height: 1, width: '100%', background: '#DCE0E6', marginTop: 16 }} />
+
+    <Text style={{ fontSize: 17, color: '#3D4756', lineHeight: 1.6, marginTop: 22 }}>
+        我刚接手时，网关引擎上有三处明确的瓶颈：一处丢数据，一处上不去，一处说不清。
+    </Text>
+
+    <Box style={{ flexDirection: 'column', width: '100%', marginTop: 24, borderTop: '1px solid #DCE0E6' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', paddingTop: 34, paddingBottom: 34, borderBottom: '1px solid #DCE0E6', width: '100%' }}>
+            <Text style={{ fontSize: 14, color: '#98A2B3', width: 40, lineHeight: 1.5 }}>01</Text>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', width: 210, lineHeight: 1.3 }}>访问日志打点</Text>
+            <Text style={{ flex: 1, fontSize: 17, color: '#3D4756', lineHeight: 1.55 }}>打点与请求 1:1 绑定，每个请求起一个协程上报；协程数量有上限，切换开销还会拖慢请求。</Text>
+            <Text style={{ fontSize: 14, color: '#E1582F', width: 260, textAlign: 'right' }}>7,000 QPS 下每天丢千万级日志</Text>
+        </Box>
+
+        <Box style={{ flexDirection: 'row', alignItems: 'center', paddingTop: 34, paddingBottom: 34, borderBottom: '1px solid #DCE0E6', width: '100%' }}>
+            <Text style={{ fontSize: 14, color: '#98A2B3', width: 40, lineHeight: 1.5 }}>02</Text>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', width: 210, lineHeight: 1.3 }}>路由匹配</Text>
+            <Text style={{ flex: 1, fontSize: 17, color: '#3D4756', lineHeight: 1.55 }}>完全匹配与前缀匹配都是线性遍历，复杂度 O(N)；单域名路由一多，吞吐就卡住。</Text>
+            <Text style={{ fontSize: 14, color: '#E1582F', width: 260, textAlign: 'right' }}>500 条路由后吞吐停在 2,000 QPS</Text>
+        </Box>
+
+        <Box style={{ flexDirection: 'row', alignItems: 'center', paddingTop: 34, paddingBottom: 34, borderBottom: '1px solid #DCE0E6', width: '100%' }}>
+            <Text style={{ fontSize: 14, color: '#98A2B3', width: 40, lineHeight: 1.5 }}>03</Text>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', width: 210, lineHeight: 1.3 }}>配置加载</Text>
+            <Text style={{ flex: 1, fontSize: 17, color: '#3D4756', lineHeight: 1.55 }}>没有版本号：写入靠抢、加载靠 TTL，缓存里会留旧值，重载又压在请求路径上。</Text>
+            <Text style={{ fontSize: 14, color: '#E1582F', width: 260, textAlign: 'right' }}>Redis 脏数据 · P99 长尾</Text>
+        </Box>
+    </Box>
+
+    <Box style={{ flex: 1 }} />
+
+    <Box style={{ flexDirection: 'row', width: '100%' }}>
+        <Box style={{ width: 2, background: '#E1582F' }} />
+        <Text style={{ flex: 1, fontSize: 17, color: '#12161F', lineHeight: 1.6, paddingLeft: 20 }}>
+            三条都不是业务方提的需求，而是架构层的系统性隐患——局部打补丁解决不了，只能从底座改。
+        </Text>
+    </Box>
+
+    <Box style={{ position: 'absolute', left: 60, right: 60, bottom: 30, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>韩雪刚 · 个人工作展示</Text>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>13 / 21</Text>
+    </Box>
+</Slide>

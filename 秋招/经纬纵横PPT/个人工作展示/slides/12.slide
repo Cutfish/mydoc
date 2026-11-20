@@ -1,0 +1,65 @@
+<Slide style={{ width: 1280, height: 720, background: '#F6F7F9', padding: 60, fontFamily: 'Microsoft YaHei', flexDirection: 'column' }}>
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#12161F', lineHeight: 1.2 }}>AI 提效：先能度量，才谈得上推广</Text>
+        <Text style={{ fontSize: 14, color: '#98A2B3', letterSpacing: 2, lineHeight: 1.5 }}>03 / 产品与项目</Text>
+    </Box>
+    <Box style={{ height: 1, width: '100%', background: '#DCE0E6', marginTop: 16 }} />
+
+    <Box style={{ flexDirection: 'row', width: '100%', marginTop: 24 }}>
+        <Box style={{ width: 480, flexDirection: 'column' }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1B3C6E' }}>数据从哪来</Text>
+
+            <Box style={{ flexDirection: 'column', gap: 26, marginTop: 24 }}>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>01　埋点</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.55 }}>评审与单测的调用结果、采纳与否，全部落到数据表</Text>
+                </Box>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>02　数据接口</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.55 }}>按团队、仓库、环节聚合的查询接口，供看板直接消费</Text>
+                </Box>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>03　看板</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.55 }}>使用量、覆盖范围、质量指标三个维度，一眼看到差距</Text>
+                </Box>
+            </Box>
+        </Box>
+
+        <Box style={{ flex: 1, flexDirection: 'column', borderLeft: '1px solid #DCE0E6', paddingLeft: 40, marginLeft: 40 }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#E1582F' }}>看板带来了什么</Text>
+
+            <Box style={{ flexDirection: 'column', gap: 26, marginTop: 24 }}>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>推广有依据</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.55 }}>谁在用、用了几次、用在哪，一目了然，不用靠汇报里的形容词</Text>
+                </Box>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>问题能定位</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.55 }}>使用量高但采纳率低的环节，说明工具本身有问题，而不是人不用</Text>
+                </Box>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>决策可量化</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.55 }}>试点扩不扩、先扩到哪，由数据决定而不是拍脑袋</Text>
+                </Box>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>复用有基础</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.55 }}>新团队接入时直接看同类团队的数据，不用再从头试错</Text>
+                </Box>
+            </Box>
+        </Box>
+    </Box>
+
+    <Box style={{ flex: 1 }} />
+
+    <Box style={{ flexDirection: 'row', width: '100%' }}>
+        <Box style={{ width: 2, background: '#E1582F' }} />
+        <Text style={{ flex: 1, fontSize: 17, color: '#12161F', lineHeight: 1.6, paddingLeft: 20 }}>
+            AI 提效最难的不是让模型变强，而是证明它真的被用了、并且有用——看板是这件事唯一的凭据。
+        </Text>
+    </Box>
+
+    <Box style={{ position: 'absolute', left: 60, right: 60, bottom: 30, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>韩雪刚 · 个人工作展示</Text>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>12 / 21</Text>
+    </Box>
+</Slide>

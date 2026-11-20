@@ -1,0 +1,68 @@
+=== boot pid=12388 ts=2026-11-02 16:55:12.305 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js upsert-dsl _w8.pptx --dsl-file slides/08.slide --page-index 7 ===
+[2026-11-02 16:55:12.300] [INFO ] [pid=12388] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-02 16:55:12.336] [ERROR] [pid=12388] [http] editorStatus http 404 url=http://127.0.0.1:39099/localapi/editor/status req={"file_path":"/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/_w8.pptx"} resp={"code":-1,"message":"no editor open for file_path=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/_w8.pptx"} ms=17
+[2026-11-02 16:55:12.342] [WARN ] [pid=12388] [slide-version] no editor for filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/_w8.pptx, trigger reopen
+[2026-11-02 16:55:12.349] [ERROR] [pid=12388] [http] editorStatus http 404 url=http://127.0.0.1:39099/localapi/editor/status req={"file_path":"/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/_w8.pptx"} resp={"code":-1,"message":"no editor open for file_path=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/_w8.pptx"} ms=2
+[2026-11-02 16:55:12.355] [INFO ] [pid=12388] [open-file] open send url=http://127.0.0.1:39099/localapi/open filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/_w8.pptx
+[2026-11-02 16:55:12.366] [INFO ] [pid=12388] [open-file] open ok fileId=55024C8E fileType=slide filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/_w8.pptx ms=6
+[2026-11-02 16:55:12.378] [INFO ] [pid=12388] [slide-version] fileId=55024C8E version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/_w8.pptx
+=== boot pid=47876 ts=2026-11-03 00:53:57.302 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 0 --out /tmp/pptshots/p1.png ===
+[2026-11-03 00:53:57.298] [INFO ] [pid=47876] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:53:57.332] [INFO ] [pid=47876] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=47940 ts=2026-11-03 00:53:58.678 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 1 --out /tmp/pptshots/p2.png ===
+[2026-11-03 00:53:58.674] [INFO ] [pid=47940] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:53:58.708] [INFO ] [pid=47940] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=47966 ts=2026-11-03 00:54:00.060 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 2 --out /tmp/pptshots/p3.png ===
+[2026-11-03 00:54:00.056] [INFO ] [pid=47966] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:00.096] [INFO ] [pid=47966] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48015 ts=2026-11-03 00:54:01.405 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 3 --out /tmp/pptshots/p4.png ===
+[2026-11-03 00:54:01.401] [INFO ] [pid=48015] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:01.437] [INFO ] [pid=48015] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48072 ts=2026-11-03 00:54:02.783 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 4 --out /tmp/pptshots/p5.png ===
+[2026-11-03 00:54:02.777] [INFO ] [pid=48072] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:02.812] [INFO ] [pid=48072] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48096 ts=2026-11-03 00:54:04.099 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 5 --out /tmp/pptshots/p6.png ===
+[2026-11-03 00:54:04.095] [INFO ] [pid=48096] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:04.133] [INFO ] [pid=48096] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48176 ts=2026-11-03 00:54:05.499 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 6 --out /tmp/pptshots/p7.png ===
+[2026-11-03 00:54:05.495] [INFO ] [pid=48176] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:05.530] [INFO ] [pid=48176] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48220 ts=2026-11-03 00:54:06.809 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 7 --out /tmp/pptshots/p8.png ===
+[2026-11-03 00:54:06.805] [INFO ] [pid=48220] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:06.839] [INFO ] [pid=48220] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48237 ts=2026-11-03 00:54:08.170 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 8 --out /tmp/pptshots/p9.png ===
+[2026-11-03 00:54:08.166] [INFO ] [pid=48237] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:08.200] [INFO ] [pid=48237] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48290 ts=2026-11-03 00:54:09.504 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 9 --out /tmp/pptshots/p10.png ===
+[2026-11-03 00:54:09.500] [INFO ] [pid=48290] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:09.538] [INFO ] [pid=48290] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48336 ts=2026-11-03 00:54:10.873 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 10 --out /tmp/pptshots/p11.png ===
+[2026-11-03 00:54:10.868] [INFO ] [pid=48336] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:10.903] [INFO ] [pid=48336] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48344 ts=2026-11-03 00:54:12.246 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 11 --out /tmp/pptshots/p12.png ===
+[2026-11-03 00:54:12.242] [INFO ] [pid=48344] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:12.279] [INFO ] [pid=48344] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48396 ts=2026-11-03 00:54:13.600 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 12 --out /tmp/pptshots/p13.png ===
+[2026-11-03 00:54:13.596] [INFO ] [pid=48396] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:13.629] [INFO ] [pid=48396] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48473 ts=2026-11-03 00:54:14.956 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 13 --out /tmp/pptshots/p14.png ===
+[2026-11-03 00:54:14.952] [INFO ] [pid=48473] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:14.991] [INFO ] [pid=48473] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48486 ts=2026-11-03 00:54:16.327 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 14 --out /tmp/pptshots/p15.png ===
+[2026-11-03 00:54:16.323] [INFO ] [pid=48486] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:16.357] [INFO ] [pid=48486] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48610 ts=2026-11-03 00:54:17.733 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 15 --out /tmp/pptshots/p16.png ===
+[2026-11-03 00:54:17.728] [INFO ] [pid=48610] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:17.766] [INFO ] [pid=48610] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48656 ts=2026-11-03 00:54:19.100 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 16 --out /tmp/pptshots/p17.png ===
+[2026-11-03 00:54:19.095] [INFO ] [pid=48656] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:19.130] [INFO ] [pid=48656] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48673 ts=2026-11-03 00:54:20.453 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 17 --out /tmp/pptshots/p18.png ===
+[2026-11-03 00:54:20.448] [INFO ] [pid=48673] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:20.489] [INFO ] [pid=48673] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48721 ts=2026-11-03 00:54:21.815 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 18 --out /tmp/pptshots/p19.png ===
+[2026-11-03 00:54:21.811] [INFO ] [pid=48721] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:21.861] [INFO ] [pid=48721] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx
+=== boot pid=48780 ts=2026-11-03 00:54:23.198 cwd=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示 argv=/Users/hanxuegang/.workbuddy/binaries/node/versions/22.22.2-6/lib/node_modules/@tencent/slidep/dist/index.js screenshot 企业应用网关.pptx --page-index 19 --out /tmp/pptshots/p20.png ===
+[2026-11-03 00:54:23.194] [INFO ] [pid=48780] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-03 00:54:23.230] [INFO ] [pid=48780] [slide-version] fileId=0F0AB504 version=0 filePath=/Users/hanxuegang/Documents/mydoc/秋招/经纬纵横PPT/个人工作展示/企业应用网关.pptx

@@ -1,0 +1,29 @@
+<Slide style={{ width: 1280, height: 720, background: '#0E1117', padding: 60, fontFamily: 'Microsoft YaHei', flexDirection: 'column' }}>
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%', height: 20 }}>
+        <Text style={{ fontSize: 14, color: '#5C6675', letterSpacing: 3 }}>个人工作展示 · 2026</Text>
+        <Text style={{ fontSize: 14, color: '#5C6675', letterSpacing: 2 }}>访问控制 · 网关 · 配置一致性</Text>
+    </Box>
+
+    <Box style={{ marginTop: 150, flexDirection: 'column', width: 1060 }}>
+        <Text style={{ fontSize: 68, fontWeight: 'bold', color: '#F4F6F9', lineHeight: 1.15, letterSpacing: 3 }}>
+            企业应用网关
+        </Text>
+        <Text style={{ fontSize: 22, color: '#98A3B2', lineHeight: 1.45, marginTop: 26 }}>
+            一个内网访问控制产品：架构、治理，与三次性能优化
+        </Text>
+        <Text style={{ fontSize: 18, color: '#6B7686', lineHeight: 1.6, marginTop: 20 }}>
+            从控制面到网关引擎，我把配置、权限与请求三条链路重新理了一遍
+        </Text>
+    </Box>
+
+    <Box style={{ flex: 1 }} />
+
+    <Box style={{ height: 1, width: '100%', background: '#2A303C' }} />
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', width: '100%', marginTop: 22 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'baseline', gap: 14 }}>
+            <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#E8ECF1' }}>韩雪刚</Text>
+            <Text style={{ fontSize: 15, color: '#7B8697' }}>江南大学 · 人工智能（硕士）</Text>
+        </Box>
+        <Text style={{ fontSize: 15, color: '#7B8697' }}>hxgofficial@163.com · 15738270353</Text>
+    </Box>
+</Slide>

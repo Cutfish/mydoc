@@ -1,0 +1,70 @@
+<Slide style={{ width: 1280, height: 720, background: '#F6F7F9', padding: 60, fontFamily: 'Microsoft YaHei', flexDirection: 'column' }}>
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#12161F', lineHeight: 1.2 }}>路由匹配：把 O(N) 换成 O(K)</Text>
+        <Text style={{ fontSize: 14, color: '#98A2B3', letterSpacing: 2, lineHeight: 1.5 }}>03 / 产品与项目</Text>
+    </Box>
+    <Box style={{ height: 1, width: '100%', background: '#DCE0E6', marginTop: 16 }} />
+
+    <Text style={{ fontSize: 17, color: '#3D4756', lineHeight: 1.6, marginTop: 22 }}>
+        换个组织方式，比较次数就从「跟路由总数成正比」变成「跟路径层数成正比」——这是这次优化唯一重要的一句话。
+    </Text>
+
+    <Box style={{ flexDirection: 'row', width: '100%', marginTop: 14 }}>
+        <Box style={{ width: 440, flexDirection: 'column' }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7B8697' }}>V1 · 线性遍历</Text>
+            <Text style={{ fontSize: 17, color: '#5C6675', lineHeight: 1.55, marginTop: 12 }}>请求进来，先遍历该域名下的全部路由，再逐条做完全匹配与前缀匹配。</Text>
+
+            <Box style={{ flexDirection: 'row', gap: 3, marginTop: 20 }}>
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+                <Box style={{ width: 16, height: 16, background: '#C9CFD8' }} />
+            </Box>
+
+            <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5, marginTop: 12 }}>比较 N 次　N = 该域名下的路由条数</Text>
+        </Box>
+
+        <Box style={{ flex: 1, flexDirection: 'column', borderLeft: '1px solid #DCE0E6', paddingLeft: 40, marginLeft: 40 }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1B3C6E' }}>V2 · 基数树下推</Text>
+            <Text style={{ fontSize: 17, color: '#3D4756', lineHeight: 1.55, marginTop: 12 }}>把路由表按路径前缀组织成基数树，逐层下推，命中最深节点就停。</Text>
+
+            <Image src='assets/radix-tree.png' style={{ width: 620, height: 207, marginTop: 12, objectFit: 'contain' }} />
+
+            <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5, marginTop: 10 }}>比较 K 次　K = 路径层数，与路由总量无关</Text>
+        </Box>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', background: '#12161F', paddingTop: 22, paddingBottom: 22, paddingLeft: 24, paddingRight: 24, gap: 16, marginTop: 26 }}>
+        <Box style={{ width: 340, flexDirection: 'column', gap: 6 }}>
+            <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#F4F6F9', lineHeight: 1.15 }}>500 → 2,000</Text>
+            <Text style={{ fontSize: 14, color: '#8B95A5' }}>单域名路由条数</Text>
+        </Box>
+        <Box style={{ width: 360, flexDirection: 'column', gap: 6 }}>
+            <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#F4F6F9', lineHeight: 1.15 }}>2,000 → 80,000</Text>
+            <Text style={{ fontSize: 14, color: '#8B95A5' }}>网关吞吐（QPS）</Text>
+        </Box>
+        <Box style={{ width: 380, flexDirection: 'column', gap: 6 }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#E1582F', lineHeight: 1.6 }}>正则路由仍顺序匹配</Text>
+            <Text style={{ fontSize: 14, color: '#8B95A5' }}>无法树化，改为在控制面限制其数量</Text>
+        </Box>
+    </Box>
+
+    <Box style={{ position: 'absolute', left: 60, right: 60, bottom: 30, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>韩雪刚 · 个人工作展示</Text>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>15 / 21</Text>
+    </Box>
+</Slide>

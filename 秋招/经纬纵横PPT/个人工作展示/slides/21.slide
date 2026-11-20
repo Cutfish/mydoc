@@ -1,0 +1,21 @@
+<Slide style={{ width: 1280, height: 720, background: '#0E1117', padding: 60, fontFamily: 'Microsoft YaHei', flexDirection: 'row', alignItems: 'center' }}>
+    <Box style={{ width: 700, flexDirection: 'column' }}>
+        <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#F4F6F9', lineHeight: 1.05, letterSpacing: 2 }}>Thanks.</Text>
+        <Text style={{ fontSize: 19, color: '#98A3B2', lineHeight: 1.6, marginTop: 26 }}>
+            关于网关架构、配置一致性、权限边界，或者这套方案里你不同意的部分，都很乐意再聊。
+        </Text>
+    </Box>
+
+    <Box style={{ width: 400, flexDirection: 'column', borderLeft: '1px solid #232A36', paddingLeft: 50, gap: 18 }}>
+        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#F4F6F9', lineHeight: 1.3 }}>韩雪刚</Text>
+        <Text style={{ fontSize: 17, color: '#98A3B2', lineHeight: 1.5 }}>江南大学 · 人工智能（硕士）</Text>
+        <Text style={{ fontSize: 17, color: '#98A3B2', lineHeight: 1.5 }}>hxgofficial@163.com</Text>
+        <Text style={{ fontSize: 17, color: '#98A3B2', lineHeight: 1.5 }}>15738270353</Text>
+    </Box>
+
+    <Box style={{ position: 'absolute', left: 60, right: 60, bottom: 96, height: 1, background: '#232A36' }} />
+    <Box style={{ position: 'absolute', left: 60, right: 60, bottom: 60, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 17, color: '#5C6675' }}>2026.10</Text>
+        <Text style={{ fontSize: 17, color: '#5C6675' }}>个人工作展示</Text>
+    </Box>
+</Slide>

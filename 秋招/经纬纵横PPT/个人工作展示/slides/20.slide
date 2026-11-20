@@ -1,0 +1,50 @@
+<Slide style={{ width: 1280, height: 720, background: '#F6F7F9', padding: 60, fontFamily: 'Microsoft YaHei', flexDirection: 'column' }}>
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#12161F', lineHeight: 1.2 }}>能力沉淀与岗位匹配</Text>
+        <Text style={{ fontSize: 14, color: '#98A2B3', letterSpacing: 2, lineHeight: 1.5 }}>03 / 产品与项目</Text>
+    </Box>
+    <Box style={{ height: 1, width: '100%', background: '#DCE0E6', marginTop: 16 }} />
+
+    <Box style={{ flexDirection: 'column', width: '100%', marginTop: 24, borderTop: '1px solid #DCE0E6' }}>
+        <Box style={{ flexDirection: 'row', paddingTop: 26, paddingBottom: 26, borderBottom: '1px solid #DCE0E6', width: '100%' }}>
+            <Text style={{ fontSize: 14, color: '#98A2B3', width: 40, lineHeight: 2 }}>01</Text>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', width: 260, lineHeight: 1.3 }}>网关与基础设施</Text>
+            <Box style={{ flex: 1, flexDirection: 'column', gap: 8 }}>
+                <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.55 }}>OpenResty 与 Golang 网关开发：多进程模型、路由匹配、批量上报、版本化配置分发。</Text>
+                <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>路由 4 倍规模 · 40 倍吞吐 · 上报量 -99.1%</Text>
+            </Box>
+        </Box>
+
+        <Box style={{ flexDirection: 'row', paddingTop: 26, paddingBottom: 26, borderBottom: '1px solid #DCE0E6', width: '100%' }}>
+            <Text style={{ fontSize: 14, color: '#98A2B3', width: 40, lineHeight: 2 }}>02</Text>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', width: 260, lineHeight: 1.3 }}>权限与安全工程</Text>
+            <Box style={{ flex: 1, flexDirection: 'column', gap: 8 }}>
+                <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.55 }}>访问控制、离职治理、超管权限、审计日志与跨网段隔离的完整落地经验。</Text>
+                <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>账号全生命周期覆盖　Agent 与超管进入流程</Text>
+            </Box>
+        </Box>
+
+        <Box style={{ flexDirection: 'row', paddingTop: 26, paddingBottom: 26, borderBottom: '1px solid #DCE0E6', width: '100%' }}>
+            <Text style={{ fontSize: 14, color: '#98A2B3', width: 40, lineHeight: 2 }}>03</Text>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', width: 260, lineHeight: 1.3 }}>平台化与 AI 工程化</Text>
+            <Box style={{ flex: 1, flexDirection: 'column', gap: 8 }}>
+                <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.55 }}>统一入口的 OpenAPI 平台设计，以及把 AI 落到流水线卡点、并用看板度量效果。</Text>
+                <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>几十个接口多集群复用　AI 评审 / 单测接入流水线</Text>
+            </Box>
+        </Box>
+    </Box>
+
+    <Box style={{ flex: 1 }} />
+
+    <Box style={{ flexDirection: 'row', width: '100%' }}>
+        <Box style={{ width: 2, background: '#E1582F' }} />
+        <Text style={{ flex: 1, fontSize: 22, fontWeight: 'bold', color: '#12161F', lineHeight: 1.5, paddingLeft: 20 }}>
+            比起把功能堆上去，我更愿意把一条链路里的不确定性一个个消掉。
+        </Text>
+    </Box>
+
+    <Box style={{ position: 'absolute', left: 60, right: 60, bottom: 30, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>韩雪刚 · 个人工作展示</Text>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>20 / 21</Text>
+    </Box>
+</Slide>

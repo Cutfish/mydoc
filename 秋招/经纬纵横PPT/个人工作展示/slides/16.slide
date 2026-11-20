@@ -1,0 +1,39 @@
+<Slide style={{ width: 1280, height: 720, background: '#F6F7F9', padding: 60, fontFamily: 'Microsoft YaHei', flexDirection: 'column' }}>
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#12161F', lineHeight: 1.2 }}>配置重构：没有版本号时的两个问题</Text>
+        <Text style={{ fontSize: 14, color: '#98A2B3', letterSpacing: 2, lineHeight: 1.5 }}>03 / 产品与项目</Text>
+    </Box>
+    <Box style={{ height: 1, width: '100%', background: '#DCE0E6', marginTop: 16 }} />
+
+    <Box style={{ flexDirection: 'row', width: '100%', marginTop: 24 }}>
+        <Box style={{ width: 560, flexDirection: 'column' }}>
+            <Text style={{ fontSize: 14, color: '#98A2B3' }}>问题一 · 写</Text>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', lineHeight: 1.3, marginTop: 12 }}>Redis 里留着脏数据</Text>
+
+            <Image src='assets/seq-dirty-redis-v2.png' style={{ width: 560, height: 249, marginTop: 14 }} />
+
+            <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.55, marginTop: 18 }}>配置「改了又回去」，而且没有任何字段能看出谁是新的。</Text>
+        </Box>
+
+        <Box style={{ flex: 1, flexDirection: 'column', marginLeft: 40 }}>
+            <Text style={{ fontSize: 14, color: '#98A2B3' }}>问题二 · 读</Text>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', lineHeight: 1.3, marginTop: 12 }}>配置加载把 P99 拉起来</Text>
+
+            <Image src='assets/latency-p99-v2.png' style={{ width: 560, height: 249, marginTop: 14 }} />
+
+            <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.55, marginTop: 18 }}>变更越频繁，长尾越明显——白天改配置，晚上告警。</Text>
+        </Box>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', width: '100%', marginTop: 60 }}>
+        <Box style={{ width: 2, background: '#1B3C6E' }} />
+        <Text style={{ flex: 1, fontSize: 17, color: '#12161F', lineHeight: 1.6, paddingLeft: 20 }}>
+            一个写坏了、一个读慢了，根因是同一个：配置里没有「版本」，系统就不知道谁更新、谁最新。
+        </Text>
+    </Box>
+
+    <Box style={{ position: 'absolute', left: 60, right: 60, bottom: 30, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>韩雪刚 · 个人工作展示</Text>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>16 / 21</Text>
+    </Box>
+</Slide>

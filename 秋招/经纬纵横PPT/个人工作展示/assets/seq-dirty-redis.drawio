@@ -1,0 +1,91 @@
+<mxfile host="65bd71144e">
+    <diagram id="seq" name="Page-1">
+        <mxGraphModel dx="1078" dy="1315" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1120" pageHeight="480" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="a" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1B3C6E;strokeWidth=2.5;fontFamily=PingFang SC;fontSize=28;fontColor=#12161F;" value="网关控制面" vertex="1">
+                    <mxGeometry height="56" width="180" x="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="b" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#DCE0E6;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=28;fontColor=#12161F;" value="MySQL" vertex="1">
+                    <mxGeometry height="56" width="180" x="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="c" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#DCE0E6;strokeWidth=1.5;dashed=1;dashPattern=6 4;fontFamily=PingFang SC;fontSize=28;fontColor=#12161F;" value="数据同步脚本" vertex="1">
+                    <mxGeometry height="56" width="180" x="620" as="geometry"/>
+                </mxCell>
+                <mxCell id="d" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E1582F;strokeWidth=2.5;fontFamily=PingFang SC;fontSize=28;fontColor=#12161F;" value="Redis" vertex="1">
+                    <mxGeometry height="56" width="180" x="880" as="geometry"/>
+                </mxCell>
+                <mxCell id="l1" edge="1" parent="1" style="endArrow=none;html=1;dashed=1;dashPattern=5 4;strokeColor=#B9C0CB;strokeWidth=2;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="190" y="56" as="sourcePoint"/>
+                        <mxPoint x="190" y="455" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="l2" edge="1" parent="1" style="endArrow=none;html=1;dashed=1;dashPattern=5 4;strokeColor=#B9C0CB;strokeWidth=2;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="450" y="56" as="sourcePoint"/>
+                        <mxPoint x="450" y="455" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="l3" edge="1" parent="1" style="endArrow=none;html=1;dashed=1;dashPattern=5 4;strokeColor=#B9C0CB;strokeWidth=2;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="710" y="56" as="sourcePoint"/>
+                        <mxPoint x="710" y="455" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="l4" edge="1" parent="1" style="endArrow=none;html=1;dashed=1;dashPattern=5 4;strokeColor=#B9C0CB;strokeWidth=2;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="970" y="56" as="sourcePoint"/>
+                        <mxPoint x="970" y="455" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m1" edge="1" parent="1" style="endArrow=block;html=1;strokeColor=#7B8697;strokeWidth=2;endFill=1;endSize=9;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="710" y="130" as="sourcePoint"/>
+                        <mxPoint x="450" y="130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m2" edge="1" parent="1" style="endArrow=block;html=1;strokeColor=#7B8697;strokeWidth=2;endFill=1;endSize=9;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="190" y="212" as="sourcePoint"/>
+                        <mxPoint x="450" y="212" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m3" edge="1" parent="1" style="endArrow=block;html=1;strokeColor=#7B8697;strokeWidth=2;endFill=1;endSize=9;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="190" y="278" as="sourcePoint"/>
+                        <mxPoint x="970" y="278" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m4" edge="1" parent="1" style="endArrow=block;html=1;strokeColor=#E1582F;strokeWidth=3;endFill=1;endSize=10;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="710" y="378" as="sourcePoint"/>
+                        <mxPoint x="970" y="378" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="t1" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontFamily=PingFang SC;fontSize=26;fontColor=#98A2B3;strokeColor=none;fillColor=none;" value="T1" vertex="1">
+                    <mxGeometry height="24" width="60" x="10" y="118" as="geometry"/>
+                </mxCell>
+                <mxCell id="t2" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontFamily=PingFang SC;fontSize=26;fontColor=#98A2B3;strokeColor=none;fillColor=none;" value="T2" vertex="1">
+                    <mxGeometry height="24" width="60" x="10" y="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="t3" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontFamily=PingFang SC;fontSize=26;fontColor=#E1582F;strokeColor=none;fillColor=none;" value="T3" vertex="1">
+                    <mxGeometry height="24" width="60" x="10" y="366" as="geometry"/>
+                </mxCell>
+                <mxCell id="q1" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontFamily=PingFang SC;fontSize=24;fontColor=#5C6675;strokeColor=none;fillColor=none;" value="① 读全量配置，拿到旧版本" vertex="1">
+                    <mxGeometry height="26" width="300" x="460" y="96" as="geometry"/>
+                </mxCell>
+                <mxCell id="q2" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontFamily=PingFang SC;fontSize=24;fontColor=#5C6675;strokeColor=none;fillColor=none;" value="② 用户改配置，MySQL 写入新版本" vertex="1">
+                    <mxGeometry height="26" width="330" x="200" y="178" as="geometry"/>
+                </mxCell>
+                <mxCell id="q3" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontFamily=PingFang SC;fontSize=24;fontColor=#5C6675;strokeColor=none;fillColor=none;background=#F6F7F9;" value="② Redis 也同步刷新为新版本" vertex="1">
+                    <mxGeometry height="26" width="380" x="330" y="244" as="geometry"/>
+                </mxCell>
+                <mxCell id="q4" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontFamily=PingFang SC;fontSize=24;fontColor=#E1582F;strokeColor=none;fillColor=none;" value="③ 脚本把旧快照写回，覆盖新值" vertex="1">
+                    <mxGeometry height="26" width="380" x="650" y="344" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

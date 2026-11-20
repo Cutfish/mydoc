@@ -1,0 +1,51 @@
+<Slide style={{ width: 1280, height: 720, background: '#F6F7F9', padding: 60, fontFamily: 'Microsoft YaHei', flexDirection: 'column' }}>
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#12161F', lineHeight: 1.2 }}>我在这个产品上做的四类事</Text>
+        <Text style={{ fontSize: 14, color: '#98A2B3', letterSpacing: 2, lineHeight: 1.5 }}>03 / 产品与项目</Text>
+    </Box>
+    <Box style={{ height: 1, width: '100%', background: '#DCE0E6', marginTop: 16 }} />
+
+    <Box style={{ flexDirection: 'column', width: '100%', marginTop: 24, borderTop: '1px solid #1B3C6E' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', paddingTop: 36, paddingBottom: 36, borderBottom: '1px solid #DCE0E6', width: '100%' }}>
+            <Text style={{ fontSize: 14, color: '#98A2B3', width: 40, lineHeight: 1.5 }}>01</Text>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', width: 280, lineHeight: 1.3 }}>OpenAPI 平台建设</Text>
+            <Text style={{ flex: 1, fontSize: 17, color: '#3D4756', lineHeight: 1.55 }}>把分散的对外能力收敛成一套统一接口，统一参数与响应规范</Text>
+            <Text style={{ fontSize: 14, color: '#E1582F', width: 250, textAlign: 'right' }}>几十个接口 · 多集群复用</Text>
+        </Box>
+
+        <Box style={{ flexDirection: 'row', alignItems: 'center', paddingTop: 36, paddingBottom: 36, borderBottom: '1px solid #DCE0E6', width: '100%' }}>
+            <Text style={{ fontSize: 14, color: '#98A2B3', width: 40, lineHeight: 1.5 }}>02</Text>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', width: 280, lineHeight: 1.3 }}>权限治理流程化</Text>
+            <Text style={{ flex: 1, fontSize: 17, color: '#3D4756', lineHeight: 1.55 }}>权限变更收进流程；Agent 身份、路由权限与限流一并补齐</Text>
+            <Text style={{ fontSize: 14, color: '#E1582F', width: 250, textAlign: 'right' }}>异动事件驱动 · 超管可视化</Text>
+        </Box>
+
+        <Box style={{ flexDirection: 'row', alignItems: 'center', paddingTop: 36, paddingBottom: 36, borderBottom: '1px solid #DCE0E6', width: '100%' }}>
+            <Text style={{ fontSize: 14, color: '#98A2B3', width: 40, lineHeight: 1.5 }}>03</Text>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', width: 280, lineHeight: 1.3 }}>AI 研发提效</Text>
+            <Text style={{ flex: 1, fontSize: 17, color: '#3D4756', lineHeight: 1.55 }}>把 AI 能力落到研发流水线的卡点上，并且让效果可度量</Text>
+            <Text style={{ fontSize: 14, color: '#E1582F', width: 250, textAlign: 'right' }}>AI 评审 / 单测 · 数据看板</Text>
+        </Box>
+
+        <Box style={{ flexDirection: 'row', alignItems: 'center', paddingTop: 36, paddingBottom: 36, borderBottom: '1px solid #DCE0E6', width: '100%' }}>
+            <Text style={{ fontSize: 14, color: '#98A2B3', width: 40, lineHeight: 1.5 }}>04</Text>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', width: 280, lineHeight: 1.3 }}>网关引擎重构</Text>
+            <Text style={{ flex: 1, fontSize: 17, color: '#3D4756', lineHeight: 1.55 }}>打点、路由、配置三条链路的吞吐、延迟与一致性</Text>
+            <Text style={{ fontSize: 14, color: '#E1582F', width: 250, textAlign: 'right' }}>-99.1% · 40 倍吞吐 · 四类问题</Text>
+        </Box>
+    </Box>
+
+    <Box style={{ flex: 1 }} />
+
+    <Box style={{ flexDirection: 'row', width: '100%' }}>
+        <Box style={{ width: 2, background: '#E1582F' }} />
+        <Text style={{ flex: 1, fontSize: 17, color: '#12161F', lineHeight: 1.6, paddingLeft: 20 }}>
+            前两件是业务方直接提的需求；后两件是我主动往前推的——底座不稳的时候，接再多需求也不算数。
+        </Text>
+    </Box>
+
+    <Box style={{ position: 'absolute', left: 60, right: 60, bottom: 30, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>韩雪刚 · 个人工作展示</Text>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>09 / 21</Text>
+    </Box>
+</Slide>

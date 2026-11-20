@@ -1,0 +1,64 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import sharp from 'sharp';
+import {PresentationFile,FileBlob} from '@oai/artifact-tool';
+import {finalizePresentation} from '/Users/hanxuegang/.codex/plugins/cache/openai-primary-runtime/presentations/26.1011.11113/skills/presentations/container_tools/artifact_tool_utils.mjs';
+const root=process.cwd(), build=path.join(root,'.poster-build');
+const media=path.join(build,'具有温度可视化功能的层状异质热致变色复合膜及其自适应热管理/media');
+const p=await PresentationFile.importPptx(await FileBlob.load('ITMC-fmt.pptx'));
+p.slides.items[0].delete();
+const s=p.slides.add(); s.background.fill='#FFFFFF';
+const W=30240288/9525,H=42479913/9525;
+const red='#921639',accent='#C00000',peach='#FBE5D6',font='Times New Roman';
+function rect(name,x,y,w,h,color){return s.shapes.add({name,geometry:'rect',position:{left:x,top:y,width:w,height:h},fill:color,line:{fill:'none',width:0}});}
+function txt(name,text,x,y,w,h,size=44,opt={}){let o=s.shapes.add({name,geometry:'textbox',position:{left:x,top:y,width:w,height:h},fill:'none',line:{fill:'none',width:0}});o.text=text;o.text.style={fontSize:size,typeface:font,color:'#111111',alignment:'left',verticalAlignment:'top',wrap:'square',autoFit:'none',insets:0,...opt};return o;}
+function bar(name,text,x,y,w){rect(name+' band',x,y,w,100,peach);txt(name,text,x+15,y+15,w-30,75,64,{bold:true,alignment:'center'});}
+function sub(name,text,x,y,w){txt(name,text,x,y,w,75,49,{bold:true,italic:true});}
+async function img(name,file,x,y,w,h,crop){let sh=sharp(path.join(media,file));if(crop)sh=sh.extract(crop);const b=await sh.flatten({background:'#ffffff'}).png().toBuffer();s.images.add({name,blob:b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),contentType:'image/png',alt:name,fit:'contain',position:{left:x,top:y,width:w,height:h}});}
+rect('Top burgundy band',0,0,W,126,red);rect('Header rule',0,700,W,24,red);rect('Bottom burgundy band',0,H-28,W,28,red);rect('Column divider',1583,755,6,H-818,red);
+txt('Research title','Layered Heterostructural Thermochromic Composite Films\nwith Temperature Visualization\nfor Adaptive Thermal Management',110,174,W-220,355,99,{bold:true,color:accent,alignment:'center'});
+txt('Editable author line','[Authors]',150,548,W-300,62,48,{bold:true,alignment:'center',color:'#555555'});
+txt('Editable affiliation and contact','[Affiliation]     [Corresponding author e-mail]',150,621,W-300,55,40,{alignment:'center',italic:true,color:'#555555'});
+const L=48,R=1635,C=1490;
+bar('Introduction','INTRODUCTION',L,770,C);
+txt('Introduction copy','Integrate visible temperature indication, reversible optical switching and latent heat storage in one flexible film.\nA layered structure separates the dark conductive storage layer from the thermochromic optical surface.',L+18,903,C-36,248,46);
+bar('Materials and methods','MATERIALS & METHODS',L,1200,C);
+sub('Layer formulations','I.  Independently optimized functional layers',L+18,1332,C-36);
+txt('Formulation copy','FPCM: PEG1000/PVA with CNF-COOH reinforcement and MWCNTs-COOH conductive pathways.\nTC-RGY20: electrospun PVDF with 20 wt% thermochromic microcapsules (22, 28 and 33 °C).',L+18,1417,C-36,240,44);
+await img('Original Figure 3: bilayer preparation','image3.png',L+25,1672,C-50,793);
+txt('Assembly caption','TPU-assisted electrospraying (10 kV, 15 cm), followed by lamination at 40 °C and 0.05 MPa for 20 min, joins the porous TC-RGY20 layer to the dense FPCM layer.',L+18,2472,C-36,170,41);
+bar('FPCM results','RESULTS: STORAGE & STRUCTURE',L,2680,C);
+sub('FPCM performance','II.  Flexible storage layer with low leakage',L+18,2809,C-36);
+await img('Original Figure 4c: FPCM tensile response','image4.png',L+5,2895,735,557,{left:911,top:0,width:387,height:340});
+await img('Original Figure 4d: FPCM DSC response','image4.png',L+755,2895,735,557,{left:28,top:345,width:395,height:329});
+rect('Clean tensile panel label',L+40,2900,65,65,'#FFFFFF');
+txt('Tensile panel label','(c)',L+41,2900,65,60,43,{bold:true});
+rect('Clean DSC panel label',L+758,2896,65,65,'#FFFFFF');
+txt('DSC panel label','(d)',L+759,2896,65,60,43,{bold:true});
+txt('FPCM metrics','Melting enthalpy: 59.14 J/g    Tensile strength: 7.18 MPa\nElongation at break: 167.79%\nAverage leakage: 2.06% after 2 h at 80 °C (n = 5)',L+18,3470,C-36,175,44,{bold:true});
+sub('Interface morphology','III.  Dense–porous bilayer integration',L+18,3665,C-36);
+await img('Original Figure 12c1: bilayer cross section','image15.png',L+150,3750,540,374,{left:876,top:0,width:421,height:292});
+await img('Original Figure 12c2: bilayer interface','image15.png',L+810,3750,540,374,{left:876,top:309,width:421,height:293});
+bar('Conclusions','CONCLUSIONS',L,4150,C);
+txt('Conclusions copy','The layered film couples reversible optical switching with latent heat buffering, enabling temperature visualization and bidirectional outdoor thermal regulation.',L+18,4282,C-36,142,43);
+bar('Optical results','RESULTS: VISUALIZATION & REGULATION',R,770,C);
+sub('Temperature visualization','IV.  Reversible temperature visualization',R+18,910,C-36);
+await img('Original Figure 9: thermochromic response and stability','image12.png',R+10,1000,C-20,761);
+txt('Color findings','Stepwise gray, green, yellow and near-white states over 20–35 °C. TC-RGY50 retains colorimetric stability after 200 cycles (ΔE < 0.25).',R+18,1780,C-36,158,43);
+sub('Optical switch','V.  Low-temperature absorption / high-temperature reflection',R+18,1990,C-36);
+await img('Original Figure 10: temperature-dependent reflectance','image13.png',R+10,2080,C-20,738);
+txt('Reflectance findings','TC-RGY20 provides a visible relative-reflectance modulation of 30.32 percentage points between 20 and 35 °C, while balancing optical response and structural integrity.',R+18,2835,C-36,160,43);
+sub('Outdoor thermal regulation','VI.  Outdoor bidirectional thermal regulation',R+18,3035,C-36);
+await img('Original Figure 13c–f: outdoor temperatures and temperature differences','image16.png',R+10,3125,C-20,1068,{left:0,top:292,width:911,height:662});
+txt('Outdoor metrics','High irradiance: 12–17 °C cooler than bare copper\nLow irradiance (< 200 W/m²): 2–4 °C warmer than bare copper',R+18,4210,C-36,125,45,{bold:true,color:accent});
+txt('Temperature difference definition','ΔT = TCu − Tsample. Positive ΔT denotes cooling relative to bare copper.',R+18,4355,C-36,54,34);
+s.speakerNotes.text='Content source: 具有温度可视化功能的层状异质热致变色复合膜及其自适应热管理.docx. Layout reference: ITMC-fmt.pptx, slide 1. Figures are unaltered original experimental figures, apart from explicitly selected panels and white alpha flattening. FPCM metrics refer to the storage layer. The 200-cycle ΔE result refers to TC-RGY50, not TC-RGY20. Outdoor temperature differences are relative to the bare-copper reference. Authors, affiliation and contact were not supplied in the manuscript and remain editable placeholders.';
+await fs.mkdir('output',{recursive:true});
+await (await PresentationFile.exportPptx(p)).save(path.join(build,'candidate.pptx'));
+await fs.writeFile(path.join(build,'poster-preview.png'),new Uint8Array(await (await p.export({slide:s,format:'png',scale:0.5})).arrayBuffer()));
+await fs.writeFile(path.join(build,'poster-layout.json'),await (await s.export({format:'layout'})).text());
+console.log('Draft exported');
+const skill='/Users/hanxuegang/.codex/plugins/cache/openai-primary-runtime/presentations/26.1011.11113/skills/presentations';
+const result=await finalizePresentation({workspaceDir:root,candidatePath:path.join(build,'candidate.pptx'),finalPath:path.join(root,'output','温度可视化自适应热管理_海报.pptx'),pythonExecutable:'/Users/hanxuegang/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python',integrityValidatorPath:path.join(skill,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(skill,'container_tools/inspect_presentation_layout_geometry.py'),layoutArgs:['--expected-slide-size-emu','30240288,42479913','--validate-heading-fit'],explicitTotalSlideCount:1,fontPolicy:{basis:'reference',families:['Times New Roman'],referencePath:path.join(root,'ITMC-fmt.pptx'),referenceSha256:crypto.createHash('sha256').update(await fs.readFile('ITMC-fmt.pptx')).digest('hex')},verifyArtifactToolImport:true,receiptPath:path.join(build,'validation-delivery.json')});
+console.log(JSON.stringify(result));

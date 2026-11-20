@@ -1,0 +1,80 @@
+<Slide style={{ width: 1280, height: 720, background: '#F6F7F9', padding: 60, fontFamily: 'Microsoft YaHei', flexDirection: 'column' }}>
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#12161F', lineHeight: 1.2 }}>OpenAPI 平台建设：把对外能力收敛成一个入口</Text>
+        <Text style={{ fontSize: 14, color: '#98A2B3', letterSpacing: 2, lineHeight: 1.5 }}>03 / 产品与项目</Text>
+    </Box>
+    <Box style={{ height: 1, width: '100%', background: '#DCE0E6', marginTop: 16 }} />
+
+    <Box style={{ flexDirection: 'row', width: '100%', marginTop: 24 }}>
+        <Box style={{ width: 460, flexDirection: 'column' }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7B8697' }}>接入成本高在哪</Text>
+
+            <Box style={{ flexDirection: 'column', gap: 30, marginTop: 26 }}>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>能力分散</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>域名、授权、服务申请分散在多个系统，业务方要跑好几套流程</Text>
+                </Box>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>同名接口不支持</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>不同环境各有一套实现，参数与行为不一致，接入方要分别适配</Text>
+                </Box>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>部分接口慢查询</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>授权用户列表、服务反查域名这类接口，响应时间明显偏高</Text>
+                </Box>
+            </Box>
+        </Box>
+
+        <Box style={{ flex: 1, flexDirection: 'column', borderLeft: '1px solid #DCE0E6', paddingLeft: 40, marginLeft: 40 }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#E1582F' }}>我做了什么</Text>
+
+            <Box style={{ flexDirection: 'column', marginTop: 26, borderTop: '1px solid #DCE0E6' }}>
+                <Box style={{ flexDirection: 'row', paddingTop: 18, paddingBottom: 18, borderBottom: '1px solid #DCE0E6' }}>
+                    <Text style={{ fontSize: 14, color: '#98A2B3', width: 36, lineHeight: 2 }}>01</Text>
+                    <Box style={{ flex: 1, flexDirection: 'column', gap: 6 }}>
+                        <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>补齐几十个接口</Text>
+                        <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>覆盖域名、访问控制授权、服务管理申请等场景，统一参数与响应规范</Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ flexDirection: 'row', paddingTop: 18, paddingBottom: 18, borderBottom: '1px solid #DCE0E6' }}>
+                    <Text style={{ fontSize: 14, color: '#98A2B3', width: 36, lineHeight: 2 }}>02</Text>
+                    <Box style={{ flex: 1, flexDirection: 'column', gap: 6 }}>
+                        <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>统一鉴权与 URI 改写</Text>
+                        <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>让测试、预发、生产三套集群复用同一套接口能力，行为完全一致</Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ flexDirection: 'row', paddingTop: 18, paddingBottom: 18, borderBottom: '1px solid #DCE0E6' }}>
+                    <Text style={{ fontSize: 14, color: '#98A2B3', width: 36, lineHeight: 2 }}>03</Text>
+                    <Box style={{ flex: 1, flexDirection: 'column', gap: 6 }}>
+                        <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>慢查询治理</Text>
+                        <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>索引优化、查询收敛、缓存策略三件套，压掉授权列表与服务反查的时延</Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ flexDirection: 'row', paddingTop: 18, paddingBottom: 18, borderBottom: '1px solid #DCE0E6' }}>
+                    <Text style={{ fontSize: 14, color: '#98A2B3', width: 36, lineHeight: 2 }}>04</Text>
+                    <Box style={{ flex: 1, flexDirection: 'column', gap: 6 }}>
+                        <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>多类型容器接入</Text>
+                        <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>梳理不同容器平台的环境标识差异，让多种容器类型走同一套接入流程</Text>
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
+    </Box>
+
+    <Box style={{ flex: 1 }} />
+
+    <Box style={{ flexDirection: 'row', width: '100%' }}>
+        <Box style={{ width: 2, background: '#1B3C6E' }} />
+        <Text style={{ flex: 1, fontSize: 17, color: '#12161F', lineHeight: 1.6, paddingLeft: 20 }}>
+            平台化的价值不在接口数量，而在统一规范、统一入口、统一行为——业务方对接一次就能用上全部能力。
+        </Text>
+    </Box>
+
+    <Box style={{ position: 'absolute', left: 60, right: 60, bottom: 30, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>韩雪刚 · 个人工作展示</Text>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>10 / 21</Text>
+    </Box>
+</Slide>

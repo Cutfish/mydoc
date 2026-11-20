@@ -1,0 +1,81 @@
+<Slide style={{ width: 1280, height: 720, background: '#F6F7F9', padding: 60, fontFamily: 'Microsoft YaHei', flexDirection: 'column' }}>
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#12161F', lineHeight: 1.2 }}>迁移：链路长、依赖多，怎么保证不出事</Text>
+        <Text style={{ fontSize: 14, color: '#98A2B3', letterSpacing: 2, lineHeight: 1.5 }}>03 / 产品与项目</Text>
+    </Box>
+    <Box style={{ height: 1, width: '100%', background: '#DCE0E6', marginTop: 16 }} />
+
+    <Box style={{ flexDirection: 'row', width: '100%', marginTop: 24 }}>
+        <Box style={{ width: 500, flexDirection: 'column' }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1B3C6E' }}>改造横跨的六个环节</Text>
+
+            <Box style={{ flexDirection: 'column', marginTop: 20, borderLeft: '1px solid #DCE0E6', paddingLeft: 26 }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'baseline' }}>
+                    <Text style={{ fontSize: 14, color: '#98A2B3', width: 34 }}>01</Text>
+                    <Text style={{ fontSize: 17, color: '#12161F', width: 140 }}>版本发号</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', flex: 1 }}>写配置时生成单调版本</Text>
+                </Box>
+                <Box style={{ flexDirection: 'row', alignItems: 'baseline', marginTop: 22 }}>
+                    <Text style={{ fontSize: 14, color: '#98A2B3', width: 34 }}>02</Text>
+                    <Text style={{ fontSize: 17, color: '#12161F', width: 140 }}>缓存写入</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', flex: 1 }}>Redis 与 MySQL 的写入时序</Text>
+                </Box>
+                <Box style={{ flexDirection: 'row', alignItems: 'baseline', marginTop: 22 }}>
+                    <Text style={{ fontSize: 14, color: '#98A2B3', width: 34 }}>03</Text>
+                    <Text style={{ fontSize: 17, color: '#12161F', width: 140 }}>通知刷新</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', flex: 1 }}>通知各节点更新本地缓存</Text>
+                </Box>
+                <Box style={{ flexDirection: 'row', alignItems: 'baseline', marginTop: 22 }}>
+                    <Text style={{ fontSize: 14, color: '#98A2B3', width: 34 }}>04</Text>
+                    <Text style={{ fontSize: 17, color: '#12161F', width: 140 }}>环境同步</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', flex: 1 }}>多套环境之间配置对齐</Text>
+                </Box>
+                <Box style={{ flexDirection: 'row', alignItems: 'baseline', marginTop: 22 }}>
+                    <Text style={{ fontSize: 14, color: '#98A2B3', width: 34 }}>05</Text>
+                    <Text style={{ fontSize: 17, color: '#12161F', width: 140 }}>重试</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', flex: 1 }}>失败任务按策略重投</Text>
+                </Box>
+                <Box style={{ flexDirection: 'row', alignItems: 'baseline', marginTop: 22 }}>
+                    <Text style={{ fontSize: 14, color: '#E1582F', width: 34 }}>06</Text>
+                    <Text style={{ fontSize: 17, color: '#12161F', width: 140 }}>死信</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', flex: 1 }}>超限任务落死信，不静默丢</Text>
+                </Box>
+            </Box>
+        </Box>
+
+        <Box style={{ flex: 1, flexDirection: 'column', borderLeft: '1px solid #DCE0E6', paddingLeft: 40, marginLeft: 40 }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#E1582F' }}>四条风险控制</Text>
+
+            <Box style={{ flexDirection: 'column', gap: 24, marginTop: 26 }}>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>双写兼容</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>新链路写入时老链路同步写一份，任一条可用即可服务</Text>
+                </Box>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>老链路兜底</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>新链路异常时自动回退，不阻断业务方的正常变更</Text>
+                </Box>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>灰度放量</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>按集群、按域名比例逐步推进，先小流量验证再全量</Text>
+                </Box>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Text style={{ fontSize: 17, color: '#12161F', lineHeight: 1.5 }}>三重验证</Text>
+                    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.5 }}>单测、回归、新旧分支对比，逐项对齐结果差异</Text>
+                </Box>
+            </Box>
+        </Box>
+    </Box>
+
+    <Box style={{ flex: 1 }} />
+
+    <Box style={{ flexDirection: 'row', width: '100%', paddingTop: 22, borderTop: '1px solid #DCE0E6' }}>
+        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#12161F', width: 200, lineHeight: 1.3 }}>当前状态</Text>
+        <Text style={{ flex: 1, fontSize: 17, color: '#3D4756', lineHeight: 1.6 }}>关键链路开发与验证已完成，正处于上线前阶段。上线后重点验证四件事：配置是否真正离线化、版本是否一致、生效时延，以及跨网段策略是否已经被隔断。</Text>
+    </Box>
+
+    <Box style={{ position: 'absolute', left: 60, right: 60, bottom: 30, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>韩雪刚 · 个人工作展示</Text>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>18 / 21</Text>
+    </Box>
+</Slide>

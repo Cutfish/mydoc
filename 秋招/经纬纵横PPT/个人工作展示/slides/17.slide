@@ -1,0 +1,51 @@
+<Slide style={{ width: 1280, height: 720, background: '#F6F7F9', padding: 60, fontFamily: 'Microsoft YaHei', flexDirection: 'column' }}>
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#12161F', lineHeight: 1.2 }}>加上版本号之后：两个问题各自收敛</Text>
+        <Text style={{ fontSize: 14, color: '#98A2B3', letterSpacing: 2, lineHeight: 1.5 }}>03 / 产品与项目</Text>
+    </Box>
+    <Box style={{ height: 1, width: '100%', background: '#DCE0E6', marginTop: 16 }} />
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', paddingTop: 12, paddingBottom: 12, borderTop: '1px solid #1B3C6E', borderBottom: '1px solid #DCE0E6', width: '100%', marginTop: 24 }}>
+        <Text style={{ fontSize: 14, color: '#98A2B3', width: 180 }}>维度</Text>
+        <Text style={{ fontSize: 14, color: '#98A2B3', width: 470 }}>没有版本号（改造前）</Text>
+        <Text style={{ fontSize: 14, color: '#E1582F', flex: 1 }}>有版本号之后</Text>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', height: 90, borderBottom: '1px solid #DCE0E6', width: '100%' }}>
+        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#12161F', width: 180, lineHeight: 1.4 }}>Redis 的数据</Text>
+        <Text style={{ fontSize: 17, color: '#7B8697', width: 470, lineHeight: 1.55 }}>两个入口抢着写，旧快照会覆盖新值</Text>
+        <Text style={{ fontSize: 17, color: '#12161F', flex: 1, lineHeight: 1.55 }}>写入先比版本，小版本直接丢弃；Lua 保证读、比、写不可分割</Text>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', height: 90, borderBottom: '1px solid #DCE0E6', width: '100%' }}>
+        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#12161F', width: 180, lineHeight: 1.4 }}>引擎的加载</Text>
+        <Text style={{ fontSize: 17, color: '#7B8697', width: 470, lineHeight: 1.55 }}>TTL 到期或变更时整份重载，打在请求路径上</Text>
+        <Text style={{ fontSize: 17, color: '#12161F', flex: 1, lineHeight: 1.55 }}>只比版本、只拉差异，并且挪到后台协程里做</Text>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', height: 90, borderBottom: '1px solid #DCE0E6', width: '100%' }}>
+        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#12161F', width: 180, lineHeight: 1.4 }}>请求的延迟</Text>
+        <Text style={{ fontSize: 17, color: '#7B8697', width: 470, lineHeight: 1.55 }}>Redis 抖一下，P99 就跟着抬起来</Text>
+        <Text style={{ fontSize: 17, color: '#12161F', flex: 1, lineHeight: 1.55 }}>本地缓存长期有效，请求路径只读内存，不回源</Text>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', height: 90, borderBottom: '1px solid #DCE0E6', width: '100%' }}>
+        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#12161F', width: 180, lineHeight: 1.4 }}>可观测性</Text>
+        <Text style={{ fontSize: 17, color: '#7B8697', width: 470, lineHeight: 1.55 }}>不知道谁更新、更新到了第几版</Text>
+        <Text style={{ fontSize: 17, color: '#12161F', flex: 1, lineHeight: 1.55 }}>版本可查、可对账、可回溯，出问题能定位到具体一次变更</Text>
+    </Box>
+
+    <Box style={{ flex: 1 }} />
+
+    <Box style={{ flexDirection: 'row', width: '100%' }}>
+        <Box style={{ width: 2, background: '#1B3C6E' }} />
+        <Text style={{ flex: 1, fontSize: 17, color: '#12161F', lineHeight: 1.6, paddingLeft: 20 }}>
+            版本号解决的不是「存什么」，而是「以谁为准」和「什么时候加载」——这两件事一定下来，两个问题同时消失。
+        </Text>
+    </Box>
+
+    <Box style={{ position: 'absolute', left: 60, right: 60, bottom: 30, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>韩雪刚 · 个人工作展示</Text>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>17 / 21</Text>
+    </Box>
+</Slide>

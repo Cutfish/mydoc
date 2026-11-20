@@ -1,0 +1,89 @@
+<mxfile host="65bd71144e">
+    <diagram id="gw-arch" name="Page-1">
+        <mxGraphModel dx="796" dy="1317" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="610" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="ctrl" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;fontFamily=PingFang SC;fontSize=19;fontColor=#333333;align=center;verticalAlign=middle;" value="网关控制面&lt;br&gt;&lt;span style=&quot;font-size:13px;color:#7B8697&quot;&gt;配置管理 · 权限审批&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="100" width="300" x="60" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="sync" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=1;dashed=1;dashPattern=5 3;fontFamily=PingFang SC;fontSize=19;fontColor=#333333;align=center;verticalAlign=middle;" value="数据同步脚本&lt;br&gt;&lt;span style=&quot;font-size:13px;color:#7B8697&quot;&gt;定时全量同步&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="100" width="300" x="1040" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="idc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EDEFF3;strokeColor=#DCE0E6;strokeWidth=1;fontFamily=PingFang SC;fontSize=19;fontColor=#12161F;align=center;verticalAlign=middle;" value="物理机&lt;br&gt;&lt;span style=&quot;font-size:13px;color:#7B8697&quot;&gt;业务系统 · 物理部署&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="100" width="300" x="60" y="470" as="geometry"/>
+                </mxCell>
+                <mxCell id="engine" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#12161F;strokeColor=#12161F;strokeWidth=1;fontFamily=PingFang SC;fontSize=19;fontColor=#F4F6F9;align=center;verticalAlign=middle;" value="网关引擎&lt;br&gt;&lt;span style=&quot;font-size:13px;color:#98A3B5&quot;&gt;路由 · 认证 · 限流&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="100" width="300" x="550" y="470" as="geometry"/>
+                </mxCell>
+                <mxCell id="cloud" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EDEFF3;strokeColor=#DCE0E6;strokeWidth=1;fontFamily=PingFang SC;fontSize=19;fontColor=#12161F;align=center;verticalAlign=middle;" value="容器云&lt;br&gt;&lt;span style=&quot;font-size:13px;color:#7B8697&quot;&gt;业务系统 · 容器部署&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="100" width="300" x="1040" y="470" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" edge="1" parent="1" source="ctrl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B9C0CB;strokeWidth=1.5;endArrow=block;endFill=1;endSize=7;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="550" y="90" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e3" edge="1" parent="1" source="sync" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B9C0CB;strokeWidth=1.5;endArrow=block;endFill=1;endSize=7;exitX=0;exitY=0.5;entryX=1;entryY=0.5;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="850" y="90" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e2" edge="1" parent="1" source="ctrl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B9C0CB;strokeWidth=1.5;endArrow=block;endFill=1;endSize=7;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="210" y="300"/>
+                        </Array>
+                        <mxPoint x="550" y="300" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e4" edge="1" parent="1" source="sync" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B9C0CB;strokeWidth=1.5;endArrow=block;endFill=1;endSize=7;exitX=0.5;exitY=1;entryX=1;entryY=0.5;">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1190" y="300"/>
+                        </Array>
+                        <mxPoint x="850" y="300" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e5" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B9C0CB;strokeWidth=1.5;endArrow=block;endFill=1;endSize=7;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="engine">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="700" y="350" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e6" edge="1" parent="1" source="engine" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B9C0CB;strokeWidth=1.5;endArrow=block;endFill=1;endSize=7;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="idc">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e7" edge="1" parent="1" source="engine" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B9C0CB;strokeWidth=1.5;endArrow=block;endFill=1;endSize=7;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="cloud">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="l1" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontFamily=PingFang SC;fontSize=13;fontColor=#5C6675;strokeColor=none;fillColor=none;" value="写配置" vertex="1">
+                    <mxGeometry height="22" width="120" x="395" y="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="l3" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontFamily=PingFang SC;fontSize=13;fontColor=#5C6675;strokeColor=none;fillColor=none;" value="定时全量读取" vertex="1">
+                    <mxGeometry height="22" width="120" x="885" y="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="l2" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontFamily=PingFang SC;fontSize=13;fontColor=#5C6675;strokeColor=none;fillColor=none;" value="写配置" vertex="1">
+                    <mxGeometry height="22" width="90" x="222" y="205" as="geometry"/>
+                </mxCell>
+                <mxCell id="l4" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontFamily=PingFang SC;fontSize=13;fontColor=#5C6675;strokeColor=none;fillColor=none;" value="写入" vertex="1">
+                    <mxGeometry height="22" width="80" x="1202" y="205" as="geometry"/>
+                </mxCell>
+                <mxCell id="l5" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontFamily=PingFang SC;fontSize=13;fontColor=#5C6675;strokeColor=none;fillColor=none;" value="读取配置" vertex="1">
+                    <mxGeometry height="22" width="110" x="714" y="398" as="geometry"/>
+                </mxCell>
+                <mxCell id="l6" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontFamily=PingFang SC;fontSize=13;fontColor=#5C6675;strokeColor=none;fillColor=none;" value="转发请求" vertex="1">
+                    <mxGeometry height="22" width="120" x="395" y="492" as="geometry"/>
+                </mxCell>
+                <mxCell id="l7" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontFamily=PingFang SC;fontSize=13;fontColor=#5C6675;strokeColor=none;fillColor=none;" value="转发请求" vertex="1">
+                    <mxGeometry height="22" width="120" x="885" y="492" as="geometry"/>
+                </mxCell>
+                <mxCell id="8oEdzTXkBMxiyflucUlC-1" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;span&gt;&lt;span style=&quot;color: rgb(18, 22, 31); font-family: &amp;quot;PingFang SC&amp;quot;; font-size: 19px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Redis&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(63, 63, 63); scrollbar-color: rgba(121, 121, 121, 0.4) rgb(31, 31, 31); font-family: &amp;quot;PingFang SC&amp;quot;; font-size: 19px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: light-dark(rgb(123, 134, 151), rgb(115, 124, 139)); scrollbar-color: rgba(121, 121, 121, 0.4) rgb(31, 31, 31); font-family: &amp;quot;PingFang SC&amp;quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-size: 13px;&quot;&gt;配置分发缓存&lt;/span&gt;&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="100" width="291" x="553" y="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="8oEdzTXkBMxiyflucUlC-2" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;span style=&quot;color: rgb(18, 22, 31); font-family: &amp;quot;PingFang SC&amp;quot;; font-size: 19px;&quot;&gt;MySQL&lt;/span&gt;&lt;br style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgba(121, 121, 121, 0.4) rgb(31, 31, 31); font-family: &amp;quot;PingFang SC&amp;quot;; font-size: 19px;&quot;&gt;&lt;span style=&quot;scrollbar-color: rgba(121, 121, 121, 0.4) rgb(31, 31, 31); font-family: &amp;quot;PingFang SC&amp;quot;; font-size: 13px; color: rgb(123, 134, 151);&quot;&gt;配置权威来源&lt;/span&gt;" vertex="1">
+                    <mxGeometry height="100" width="291" x="555" y="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

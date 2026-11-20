@@ -1,0 +1,82 @@
+<Slide style={{ width: 1280, height: 720, background: '#F6F7F9', padding: 60, fontFamily: 'Microsoft YaHei', flexDirection: 'row' }}>
+    <Box style={{ width: 420, height: 600, background: '#12161F', padding: 40, flexDirection: 'column' }}>
+        <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#F4F6F9', lineHeight: 1.1, letterSpacing: 4 }}>韩雪刚</Text>
+        <Text style={{ fontSize: 17, color: '#98A3B2', lineHeight: 1.5, marginTop: 14 }}>人工智能硕士 · 后端开发方向</Text>
+
+        <Box style={{ height: 1, background: '#2A303C', marginTop: 26 }} />
+
+        <Box style={{ flexDirection: 'column', gap: 26, marginTop: 26 }}>
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 17, color: '#6B7686' }}>籍贯</Text>
+                <Text style={{ fontSize: 17, color: '#D8DEE6' }}>河南信阳</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 17, color: '#6B7686' }}>现居</Text>
+                <Text style={{ fontSize: 17, color: '#D8DEE6' }}>江苏无锡</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 17, color: '#6B7686' }}>邮箱</Text>
+                <Text style={{ fontSize: 17, color: '#D8DEE6' }}>hxgofficial@163.com</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 17, color: '#6B7686' }}>电话</Text>
+                <Text style={{ fontSize: 17, color: '#D8DEE6' }}>15738270353</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 17, color: '#6B7686' }}>求职</Text>
+                <Text style={{ fontSize: 17, color: '#D8DEE6' }}>后端开发（Go）</Text>
+            </Box>
+        </Box>
+
+        <Box style={{ height: 1, background: '#2A303C', marginTop: 46 }} />
+        <Text style={{ fontSize: 17, color: '#8892A1', lineHeight: 1.6, marginTop: 22 }}>
+            近一年主要在做网关侧的配置分发、路由匹配与限流。
+        </Text>
+    </Box>
+
+    <Box style={{ flex: 1, flexDirection: 'column', marginLeft: 40 }}>
+        <Text style={{ fontSize: 14, color: '#98A2B3', letterSpacing: 2, textAlign: 'right' }}>01 / 个人介绍</Text>
+
+        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#E1582F', marginTop: 44 }}>教育背景</Text>
+
+        <Box style={{ flexDirection: 'column', marginTop: 20 }}>
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+                <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#12161F' }}>江南大学（211）</Text>
+                <Text style={{ fontSize: 14, color: '#98A2B3' }}>2024.09 – 至今</Text>
+            </Box>
+            <Text style={{ fontSize: 17, color: '#3D4756', lineHeight: 1.5, marginTop: 8 }}>人工智能 · 硕士</Text>
+            <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.45, marginTop: 6 }}>在读期间完成两段后端实习，聚焦网关与分布式系统</Text>
+        </Box>
+
+        <Box style={{ flexDirection: 'column', marginTop: 28 }}>
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+                <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#12161F' }}>南京工业大学</Text>
+                <Text style={{ fontSize: 14, color: '#98A2B3' }}>2020.10 – 2024.06</Text>
+            </Box>
+            <Text style={{ fontSize: 17, color: '#3D4756', lineHeight: 1.5, marginTop: 8 }}>信息管理与信息系统 · 本科</Text>
+            <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.45, marginTop: 6 }}>管理学与信息系统的交叉背景，本科阶段完成编程与数据库基础训练</Text>
+        </Box>
+
+        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#E1582F', marginTop: 44 }}>荣誉与证书</Text>
+
+        <Box style={{ flexDirection: 'column', marginTop: 8 }}>
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingTop: 16, paddingBottom: 16, borderTop: '1px solid #DCE0E6', borderBottom: '1px solid #DCE0E6' }}>
+                <Text style={{ fontSize: 17, color: '#12161F' }}>一等奖学金</Text>
+                <Text style={{ fontSize: 14, color: '#7B8697' }}>学业综合表现</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingTop: 16, paddingBottom: 16, borderBottom: '1px solid #DCE0E6' }}>
+                <Text style={{ fontSize: 17, color: '#12161F' }}>全国大学生数学竞赛</Text>
+                <Text style={{ fontSize: 14, color: '#7B8697' }}>二等奖</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingTop: 16, paddingBottom: 16, borderBottom: '1px solid #DCE0E6' }}>
+                <Text style={{ fontSize: 17, color: '#12161F' }}>英语四六级</Text>
+                <Text style={{ fontSize: 14, color: '#7B8697' }}>CET-4 / CET-6 均已通过</Text>
+            </Box>
+        </Box>
+    </Box>
+
+    <Box style={{ position: 'absolute', left: 60, right: 60, bottom: 30, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>韩雪刚 · 个人工作展示</Text>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>04 / 21</Text>
+    </Box>
+</Slide>

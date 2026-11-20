@@ -1,0 +1,53 @@
+<mxfile host="app.diagrams.net" modified="2026-11-01T00:00:00.000Z" agent="workbuddy" version="24.0.0">
+  <diagram id="radix" name="Page-1">
+    <mxGraphModel dx="660" dy="250" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="660" pageHeight="250" math="0" shadow="0" background="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="n0" value="/" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1B3C6E;strokeWidth=2;fontFamily=PingFang SC;fontSize=18;fontColor=#12161F;" vertex="1" parent="1">
+          <mxGeometry x="20" y="103" width="60" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" value="api" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1B3C6E;strokeWidth=2;fontFamily=PingFang SC;fontSize=18;fontColor=#12161F;" vertex="1" parent="1">
+          <mxGeometry x="140" y="103" width="108" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" value="user" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1B3C6E;strokeWidth=2;fontFamily=PingFang SC;fontSize=18;fontColor=#12161F;" vertex="1" parent="1">
+          <mxGeometry x="310" y="60" width="108" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" value="order" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#DCE0E6;strokeWidth=1;fontFamily=PingFang SC;fontSize=18;fontColor=#A6AEBB;" vertex="1" parent="1">
+          <mxGeometry x="310" y="150" width="108" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" value="profile" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1B3C6E;strokeColor=#1B3C6E;strokeWidth=2;fontFamily=PingFang SC;fontSize=18;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="480" y="30" width="120" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" value="list" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#DCE0E6;strokeWidth=1;fontFamily=PingFang SC;fontSize=18;fontColor=#A6AEBB;" vertex="1" parent="1">
+          <mxGeometry x="480" y="110" width="108" height="44" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1B3C6E;strokeWidth=2.5;endArrow=block;endFill=1;endSize=7;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="n0" target="n1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1B3C6E;strokeWidth=2.5;endArrow=block;endFill=1;endSize=7;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="n1" target="n2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1B3C6E;strokeWidth=2.5;endArrow=block;endFill=1;endSize=7;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="n2" target="n4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="g3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#C9CFD8;strokeWidth=1.5;endArrow=block;endFill=1;endSize=6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="n1" target="n3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#C9CFD8;strokeWidth=1.5;endArrow=block;endFill=1;endSize=6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="n2" target="n5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t1" value="命中　/api/user/profile　只比 3 次" style="text;html=1;align=left;verticalAlign=middle;fontFamily=PingFang SC;fontSize=15;fontColor=#1B3C6E;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="20" y="206" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="order / list 一次都没比较" style="text;html=1;align=left;verticalAlign=middle;fontFamily=PingFang SC;fontSize=15;fontColor=#98A2B3;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="340" y="206" width="300" height="24" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

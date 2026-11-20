@@ -1,0 +1,18 @@
+<Slide style={{ width: 1280, height: 720, background: '#F6F7F9', padding: 60, fontFamily: 'Microsoft YaHei', flexDirection: 'column' }}>
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#12161F', lineHeight: 1.2 }}>架构：控制面 + 网关引擎</Text>
+        <Text style={{ fontSize: 14, color: '#98A2B3', letterSpacing: 2, lineHeight: 1.5 }}>03 / 产品与项目</Text>
+    </Box>
+    <Box style={{ height: 1, width: '100%', background: '#DCE0E6', marginTop: 16 }} />
+
+    <Image src='assets/gateway-arch-v4.png' style={{ width: 1090, height: 460, marginTop: 21, marginLeft: 35 }} />
+
+    <Text style={{ fontSize: 14, color: '#7B8697', lineHeight: 1.45, marginTop: 16 }}>
+        配置只往一个方向流：控制面写、MySQL 存、Redis 分发、引擎只读；请求按配置分别转发到物理机与容器。
+    </Text>
+
+    <Box style={{ position: 'absolute', left: 60, right: 60, bottom: 30, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>韩雪刚 · 个人工作展示</Text>
+        <Text style={{ fontSize: 14, color: '#A6AEBB' }}>08 / 21</Text>
+    </Box>
+</Slide>

@@ -1,0 +1,24 @@
+<Slide style={{ width: 1280, height: 720, background: '#0E1117', padding: 60, fontFamily: 'Microsoft YaHei', flexDirection: 'row' }}>
+    <Box style={{ width: 660, flexDirection: 'column' }}>
+        <Text style={{ fontSize: 14, color: '#5C6675', letterSpacing: 4 }}>PART 03</Text>
+        <Text style={{ fontSize: 96, fontWeight: 'bold', color: '#1E2633', lineHeight: 1, marginTop: 24 }}>03</Text>
+        <Text style={{ fontSize: 54, fontWeight: 'bold', color: '#F2F5F8', lineHeight: 1.15, marginTop: 28 }}>产品与项目</Text>
+    </Box>
+
+    <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 26, paddingLeft: 60 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+            <Box style={{ width: 6, height: 6, background: '#E1582F' }} />
+            <Text style={{ fontSize: 19, color: '#98A3B2' }}>企业应用网关 · 五个板块</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+            <Box style={{ width: 6, height: 6, background: '#E1582F' }} />
+            <Text style={{ fontSize: 19, color: '#98A3B2' }}>管理后台 + 网关数据面</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+            <Box style={{ width: 6, height: 6, background: '#E1582F' }} />
+            <Text style={{ fontSize: 19, color: '#98A3B2' }}>四类工作，三次性能优化</Text>
+        </Box>
+    </Box>
+
+    <Box style={{ position: 'absolute', left: 60, right: 60, bottom: 60, height: 1, background: '#232A36' }} />
+</Slide>
