@@ -745,4 +745,6 @@ func (h *HashRing) Get(key string) string {
 
 1、听过 SDD（需求驱动开发）、TDD（测试驱动开发）、OpenSpec 等开发相关概念
 
-2、agent组成部分
+2、agent（harness）组成部分
+
+3、harness工作流
