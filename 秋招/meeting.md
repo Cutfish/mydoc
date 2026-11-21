@@ -743,8 +743,26 @@ func (h *HashRing) Get(key string) string {
 
 ### 11.18 海信一面
 
-1、听过 SDD（需求驱动开发）、TDD（测试驱动开发）、OpenSpec 等开发相关概念
+1、听过 SDD（需求/规范驱动开发）、TDD（测试驱动开发）、OpenSpec 等开发相关概念
+- **TDD（测试驱动开发）**：“红-绿-重构”循环。先编写失败的单元测试 $\rightarrow$ 编写最小可用实现让测试通过 $\rightarrow$ 重构优化代码。保障可测性与高质量交付。
+- **SDD（规范/需求驱动开发，Spec-Driven）**：代码未动，契约先行。先定义严谨的接口规范（如 OpenAPI 契约）或业务需求 Spec，再以此自动生成代码骨架、Mock 服务并驱动实现。
+- **OpenSpec**：开放规范协议体系（如 OpenAPI、AsyncAPI 等标准化格式）。通过统一的机器可读契约（JSON/YAML），打破前后端及跨系统协同壁垒，实现文档、测试和网关路由自动生成。
 
 2、agent（harness）组成部分
+*Harness（智能体测试与运行底座/脚手架）是支撑 Agent 闭环运行与评估的核心容器：*
+- **Sandbox Runtime（隔离运行环境）**：容器/虚拟机沙箱（如 Docker），提供安全的 Shell、文件系统供 Agent 执行代码。
+- **Model Adapter（模型网关）**：负责 Prompt 拼装、Token 计数、上下文窗口控制及与各家大模型 API 对接。
+- **Tool Executor（工具执行器）**：受控工具集（文件读写、Grep、Bash、Git 操作等），负责拦截并执行 Agent 的 Tool Call 并收集输出。
+- **Context & Memory（上下文与记忆管理）**：管理交互轨迹、历史截断/压缩，确保上下文不超限。
+- **Evaluator / Verifier（评测与校验器）**：自动化测试套件与判定逻辑，用于检查任务是否达成目标。
 
 3、harness工作流
+典型的 **“初始化 $\rightarrow$ 观察-决策-行动（ReAct 闭环） $\rightarrow$ 评测验收”** 流程：
+1. **环境准备（Setup）**：启动沙箱容器，拉取指定代码分支并安装运行依赖。
+2. **任务注入（Ingestion）**：解析 Issue/用户需求，封装系统指令与初始上下文传入 Agent。
+3. **交互闭环（ReAct Loop）**：
+   - Agent 输出思考并调用工具（Action）；
+   - Harness 在沙箱中执行工具，捕获命令输出与报错（Observation）；
+   - 将结果反哺回上下文，Agent 据此纠错并迭代下一步。
+4. **结束判定（Termination）**：Agent 主动返回完成，或触发最大步数（Max Steps）/超时上限。
+5. **验收与清理（Eval & Clean）**：运行单测/集成测试比对结果（如 SWE-bench 评测），输出得分，销毁沙箱。
